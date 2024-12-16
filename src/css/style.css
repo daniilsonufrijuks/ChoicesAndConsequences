@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -6,23 +7,33 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     height: 100vh;
 }
 
-.game-container {
+#vanta-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.story {
+    font-size: 1.2em;
+    margin-top: 30px;
+    /* margin-bottom: 20px; */
+    order: -1; /* Ensure it appears at the top */
     max-width: 600px;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    align-self: flex-start; /* Aligns the story to the top */
 }
-
-.story {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
+  
 
 .choices {
     display: flex;
@@ -35,18 +46,23 @@ body {
 }
 
 .card {
-    background: #007bff;
-    color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    padding: 20px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #f9f9f9;
+    border: 2px solid #e7d1d1;
+    border-radius: 15px;
+    width: 45%;
+    height: 300px;
+    min-width: 50px;
+    min-height: 200px;
     text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideIn 0.5s ease forwards;
+    padding: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex: 1 1 calc(50% - 10px); /* Each card takes up 50% width with a small gap */
+    margin-top: 100px;
+    margin-bottom: 50px; /* Space between cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
