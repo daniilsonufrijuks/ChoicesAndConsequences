@@ -32,6 +32,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     align-self: flex-start; /* Aligns the story to the top */
+    justify-self: center;
 }
   
 
@@ -47,16 +48,16 @@ body {
 
 .card {
     background-color: #f9f9f9;
-    border: 2px solid #e7d1d1;
+    border: 3px solid #e7d1d1;
     border-radius: 15px;
-    width: 45%;
+    width: 200px;
     height: 300px;
-    min-width: 50px;
-    min-height: 200px;
+    /* min-width: 100px; */
+    /* min-height: 200px; */
     text-align: center;
     padding: 15px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    flex: 1 1 calc(50% - 10px); /* Each card takes up 50% width with a small gap */
+    flex: 1 1 calc(50% - 10px);
     margin-top: 100px;
     margin-bottom: 50px; /* Space between cards */
     display: flex;
